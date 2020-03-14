@@ -52,6 +52,17 @@ const hashStringToInt = (str, tableSize) => {
   }
   return hash;
 }
+// ---- RETURNS THE INDEX OF THE TWO NUMBERS WHOSE RESULT EQUALS THE TARGET ---- //
+// ---- USES HASHTABLE FOR LOOKUP ---------------------------------------------- //
+const twoSum = function(nums, target) {
+  const comp = {};
+  for(let i=0; i < nums.length; i++){
+      if(comp[ nums[i] ] >= 0){
+          return [ comp[nums[i] ] , i]
+      }
+      comp[target-nums[i]] = i
+  }
+};
 
 const HashTable = class HashTable {
   // HAVE LARGE TABLE SIZE IN ORDER TO AVOID COLLISION //

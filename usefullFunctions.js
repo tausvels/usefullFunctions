@@ -131,5 +131,6 @@ module.exports = {
   bsearch,
   arrFormatter,
   arrSorterAscToDsc,
+  twoSum,
   HashTable
 }

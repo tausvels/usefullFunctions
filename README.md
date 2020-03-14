@@ -6,4 +6,4 @@
 
 2. Array Formatter - Outputs a STRING containing the array elements separated by a , except the last item. (array as the params)
 
-3. arrSorterAscDes - Outputs a sorted asc to dsc ARRAY of Objects based on the given object property. (array and object_property as params). Does not work for Boolean object_property.  
+3. arrSorterAscDes - Outputs a sorted asc to desc ARRAY of Objects based on the given object property. (array and object_property as params). Does not work for Boolean object_property.  

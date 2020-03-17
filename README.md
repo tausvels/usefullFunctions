@@ -20,7 +20,7 @@
 - Breadth first is an algorithm that is used to search for a node in a graph data structure. The algorithm starts at one node, then goes to its neighboring nodes. If the node we are searching for is not found, then it will go to the next node look at its neighbors. 
 This algorithm also uses the queue data structure to make note of all the nodes that it has visited. This way, the algorithm will save time by skipping the already visited nodes.
 
-- ![GRAPH](/screenshots/graph.png "GRAPH")
+- ![GRAPH](https://github.com/tausvels/usefullFunctions/blob/master/screenshots/graph.PNG "GRAPH")
 - usage: grpah.breadthFirst('c', node => {console.log(node.id)}) ====>> c, d, e, f
 
 2. ### DEPTH FIRST SEARCH - USED mainly for Tree which uses a STACK (LIFO) structure.
@@ -30,4 +30,4 @@ This algorithm also uses the queue data structure to make note of all the nodes 
 3. ### BINARY SEARCH TREE
 - A binary tree is a tree data structure where each node can only have upto two child nodes.
 - IN-ORDER, PRE-ORDER, POST-ORDER
-- ![BINARY](/screenshots/binaryTree.png)
+- ![BINARY](https://github.com/tausvels/usefullFunctions/blob/master/screenshots/binaryTree.PNG)

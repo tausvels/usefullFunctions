@@ -26,3 +26,8 @@ This algorithm also uses the queue data structure to make note of all the nodes 
 2. ### DEPTH FIRST SEARCH - USED mainly for Tree which uses a STACK (LIFO) structure.
 - Depth first algorithm is a traversal algorithm that starts searching at one node, and then goes down the path of its neighboring nodes before it goes to the other paths.
 - useage: graph.depthFirst('a', node => console.log(node.id)) =====>> a, c, d, e, f
+
+3. ### BINARY SEARCH TREE
+- A binary tree is a tree data structure where each node can only have upto two child nodes.
+- IN-ORDER, PRE-ORDER, POST-ORDER
+- ![BINARY](/screenshots/binaryTree.png)

@@ -13,3 +13,9 @@
 5. HashTable class - Creates a HashTable with given size. See code example.
 
 6. lengthOfLongestSubstring - Outputs the length of the longest substring. (string as a paramer). See code example.
+
+## ALGORITHMS
+
+1. Breadth First - Used mainly in graph which uses a QUEUE (FIFO) structure.
+![GRAPH](/screenshots/graph.png "GRAPH")
+grpah.breadthFirst('c', node => {console.log(node.id)}) ====>> c, d, e, f

@@ -1,3 +1,13 @@
+// ---- HASH TABLE CLASS-------------------------------------- //
+
+// ---- THE HASH FUNCTION USED BY THE HASHTABLE CLASS -------- //
+const hashStringToInt = (str, tableSize) => {
+  let hash = 17;
+  for (let i = 0; i < str.length; i++) {
+    hash = (13 * hash * str.charCodeAt(i)) % tableSize // Make the hash sizeable
+  }
+  return hash;
+}
 const HashTable = class HashTable {
   // HAVE LARGE TABLE SIZE IN ORDER TO AVOID COLLISION //
   table = new Array(3) // Defining the size of the array to be 100. Best to chose prime number

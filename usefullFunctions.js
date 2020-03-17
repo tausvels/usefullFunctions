@@ -42,16 +42,6 @@ function arrSorterAscToDsc (arr, objProp) {
     return arr.sort(compare)
   }
 
-// ---- HASH TABLE CLASS-------------------------------------- //
-
-// ---- THE HASH FUNCTION USED BY THE HASHTABLE CLASS -------- //
-const hashStringToInt = (str, tableSize) => {
-  let hash = 17;
-  for (let i = 0; i < str.length; i++) {
-    hash = (13 * hash * str.charCodeAt(i)) % tableSize // Make the hash sizeable
-  }
-  return hash;
-}
 // ---- RETURNS THE INDEX OF THE TWO NUMBERS WHOSE RESULT EQUALS THE TARGET ---- //
 // ---- USES HASHTABLE FOR LOOKUP ---------------------------------------------- //
 const twoSum = function(nums, target) {
@@ -64,7 +54,15 @@ const twoSum = function(nums, target) {
   }
 };
 
-// ---- LENGTH OF THE LONGEST SUBSTRING ----------------------- //
+// ---- RETURNS THE REVERSED NUMBER INPUT ------------------------------------- //
+const reverseNum = (input) => {
+  const limit = Math.pow(2, 31) - 1; // Limit is 2^31 (32 bit)
+  const k = input > 0 ? 1 : -1; // k = constant to be multiplied with the abs value
+
+  const numRev = Number( String( Math.abs(input)).split('').reverse().join(''));
+  return numRev > limit ? 0 : numRev * k;
+}
+// ---- LENGTH OF THE LONGEST SUBSTRING -------------------------------------- //
 /*
   Example 1:
 
@@ -168,6 +166,7 @@ module.exports = {
   arrFormatter,
   arrSorterAscToDsc,
   twoSum,
+  reverseNum,
   lengthOfLongestSubstring,
   findAllConcatenatedWordsInADict
 }

@@ -33,3 +33,7 @@ This algorithm also uses the queue data structure to make note of all the nodes 
 - A binary tree is a tree data structure where each node can only have upto two child nodes.
 - IN-ORDER, PRE-ORDER, POST-ORDER
 - ![BINARY](https://github.com/tausvels/usefullFunctions/blob/master/screenshots/binaryTree.PNG)
+
+4. ### TRIE 
+- A search algo to find words that exist in a dictionary.
+- ![TRIE](https://github.com/tausvels/usefullFunctions/blob/master/screenshots/Trie.PNG)

@@ -37,3 +37,6 @@ This algorithm also uses the queue data structure to make note of all the nodes 
 4. ### TRIE 
 - A search algo to find words that exist in a dictionary.
 - ![TRIE](https://github.com/tausvels/usefullFunctions/blob/master/screenshots/Trie.PNG)
+
+5. ### ALL SORTING ALGO
+- InsertionSort: Outputs a sorted list of array.

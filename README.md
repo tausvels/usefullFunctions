@@ -39,4 +39,5 @@ This algorithm also uses the queue data structure to make note of all the nodes 
 - ![TRIE](https://github.com/tausvels/usefullFunctions/blob/master/screenshots/Trie.PNG)
 
 5. ### ALL SORTING ALGO
-- InsertionSort: Outputs a sorted list of array.
+- InsertionSort: Outputs a sorted array (smallest to largest).
+- BucketSort: Outputs a sorted array (smallest to largest).

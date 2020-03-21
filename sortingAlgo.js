@@ -15,7 +15,7 @@ const insertionSort = arr => {
   return arr;
 };
 
-// Implement bucket sort
+// ---- BUCKET SORT -------------------------------------------- //
 const bucketSort = arr => {
   if (arr.length === 0) {
     return arr;
@@ -64,6 +64,7 @@ const bucketSort = arr => {
   return arr;
 };
 
+// ---- MERGE SORT -------------------------------------------------- //
 // option = 'asc' or 'desc' or leave blank for default ascending order
 const mergeSort = (arr, option) => {
   if (arr.length < 2) {
@@ -96,12 +97,42 @@ const merge = (subArr1, subArr2, option) => {
   return result.concat(subArr1.length ? subArr1 : subArr2);
 };
 // ---- TEST CASE FOR MERGE SORT --------------------------------------- //
-// const input = [1, 3, 5, 6, 7, 8, 4, 2, 0];
+const input = [1, 3, 5, 6, 7, 8, 4, 2, 0];
 // console.log(mergeSort(input, "desc"));
 // --------------------------------------------------------------------- //
+
+// ---- BUBBLE SORT ---------------------------------------------------- //
+const bubbleSort = (arr, option) => {
+  const arrCopy = arr.slice();
+  const length = arrCopy.length - 1;
+  const conditionCheck = (arrCopy) => {
+    if (option === "asc") {
+      return arrCopy[i] > arrCopy[i+1];
+    } else if (option === "desc") {
+      return arrCopy[i] < arrCopy[i+1];
+    } else {
+      return arrCopy[i] > arrCopy[i+1];
+    }
+  };
+  do {
+    var swapped = false;
+    for(var i = 0; i < length; i++) {
+      if (conditionCheck(arrCopy)) {
+        let temp = arrCopy[i];
+        arrCopy[i] = arrCopy[i+1];
+        arrCopy[i+1] = temp;
+        swapped = true;
+      }
+    }
+  }
+  while(swapped === true);
+  return arrCopy;
+}
+console.log(bubbleSort(input, 'desc'));
 
 module.exports = {
   insertionSort,
   bucketSort,
-  mergeSort
+  mergeSort,
+  bubbleSort
 };

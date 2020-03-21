@@ -164,12 +164,35 @@ const commonCharacters = (string1, string2) => {
   const result = {};
 
   string1.split('').forEach( char => {
-    if (string2.indexOf(char) >= 0 && char !== ' ') {
+    if (string2.indexOf(char) >= 0 && char !== ' ') { // ignores empty space
       result[char] = char;
     }
   });
   return Object.keys(result).join('');
-}
+};
+
+const translateRomanNumeral = (romanNumeral) => {
+
+  const romanMap = {I: 1, V: 5, X: 10, L: 50, C: 100, D: 500, M: 1000};
+  let result = 0;
+  const input = romanNumeral.split('');
+
+  for (let i = 0; i < input.length; i++) {
+    let currentRomanNumeral = romanMap[input[i]];
+    let nextRomanNumeral = romanMap[input[i+1]];
+    
+    if (currentRomanNumeral === undefined) {return 'null'}
+    else {
+      if (currentRomanNumeral < nextRomanNumeral) {
+        result += nextRomanNumeral - currentRomanNumeral;
+        i++; // skips the nextRomanNumeral
+      } else {
+        result += currentRomanNumeral;
+      }
+    }
+  }
+  return result;
+};
 
 
 module.exports = {
@@ -180,5 +203,6 @@ module.exports = {
   reverseNum,
   lengthOfLongestSubstring,
   findAllConcatenatedWordsInADict,
-  commonCharacters
+  commonCharacters,
+  translateRomanNumeral
 }

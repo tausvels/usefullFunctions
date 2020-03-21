@@ -16,6 +16,8 @@
 
 7. reverseNum - Outputs the reversed version of the input number. Input must be below 32 bit (2^31) otherwise output = 0.
 
+8. translateRomanNumeral - Outputs the input roman numeral string as number value. 
+
 ## ALGORITHMS [REFERENCE](https://blog.bitsrc.io/a-guide-to-javascript-algorithms-search-4d653be3dca2)
 
 1. ### Breadth First - Used mainly in Graph which uses a QUEUE (FIFO) structure.

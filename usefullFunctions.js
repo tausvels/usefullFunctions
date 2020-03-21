@@ -160,6 +160,17 @@ const isConcatenated = (words, set, target) => {
   return dp[target.length - 1] > 1
 };
 
+const commonCharacters = (string1, string2) => {
+  const result = {};
+
+  string1.split('').forEach( char => {
+    if (string2.indexOf(char) >= 0 && char !== ' ') {
+      result[char] = char;
+    }
+  });
+  return Object.keys(result).join('');
+}
+
 
 module.exports = {
   bsearch,
@@ -168,5 +179,6 @@ module.exports = {
   twoSum,
   reverseNum,
   lengthOfLongestSubstring,
-  findAllConcatenatedWordsInADict
+  findAllConcatenatedWordsInADict,
+  commonCharacters
 }

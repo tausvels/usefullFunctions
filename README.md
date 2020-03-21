@@ -45,3 +45,6 @@ This algorithm also uses the queue data structure to make note of all the nodes 
 - BucketSort: Outputs a sorted array (smallest to largest). TC: O(n^2); SC: O(n+k)--> k = no. of buckets which is usally 10 for INT and 26 for alphabets.
 - InsertionSort: Outputs a sorted array (smallest to largest). TC: O(n); SC: O(1)
 - MergeSort: Outputs a sorted array (option to change order of sort using 'asc' or 'desc') TC: O(nlogn); SC: O(n)
+
+6. ### BETTER BINARY SEARCH TREE CLASS [REFERENCE](https://www.geeksforgeeks.org/implementation-binary-search-tree-javascript/)
+- See code (also contains Inorder, PreOrder and PostOrder Algo)

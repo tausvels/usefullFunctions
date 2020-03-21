@@ -39,5 +39,6 @@ This algorithm also uses the queue data structure to make note of all the nodes 
 - ![TRIE](https://github.com/tausvels/usefullFunctions/blob/master/screenshots/Trie.PNG)
 
 5. ### ALL SORTING ALGO
-- InsertionSort: Outputs a sorted array (smallest to largest).
-- BucketSort: Outputs a sorted array (smallest to largest).
+- InsertionSort: Outputs a sorted array (smallest to largest). TC: O(n); SC: O(1)
+- BucketSort: Outputs a sorted array (smallest to largest). TC: O(n^2); SC: O(n+k)--> where k is the number of buckets which is usally 10 for INT and 26 for alphabets.
+- MergeSort: Outputs a sorted array (option to change order of sort using 'asc' or 'desc') TC: O(nlogn); SC: O(n)

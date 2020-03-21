@@ -1,63 +1,107 @@
-const insertionSort = (arr) => {
-  if (arr.length < 2) {return arr}
+const insertionSort = arr => {
+  if (arr.length < 2) {
+    return arr;
+  }
   for (let i = 1; i < arr.length; i++) {
     let j = i - 1;
-    let temp = arr[i]; console.log(temp)
+    let temp = arr[i];
+    console.log(temp);
     while (j >= 0 && arr[j] > temp) {
-      arr[j + 1] = arr[j]; 
+      arr[j + 1] = arr[j];
       j--;
     }
-    arr[j+1] = temp
+    arr[j + 1] = temp;
   }
-  return arr
+  return arr;
 };
 
 // Implement bucket sort
-const bucketSort = (arr) => {
+const bucketSort = arr => {
   if (arr.length === 0) {
     return arr;
   }
 
   // Declaring the variables first
-  let i, minValue = arr[0], maxValue = arr[0];
+  let i,
+    minValue = arr[0],
+    maxValue = arr[0];
   const bucketSize = 10;
-  
+
   // Setting min and max values
-  arr.forEach((currentVal) => {
-  	if (currentVal < minValue) {
-  		minValue = currentVal;
-  	} else if (currentVal > maxValue) {
-  		maxValue = currentVal;
-  	}
+  arr.forEach(currentVal => {
+    if (currentVal < minValue) {
+      minValue = currentVal;
+    } else if (currentVal > maxValue) {
+      maxValue = currentVal;
+    }
   });
 
   // Initializing buckets
   let bucketCount = Math.floor((maxValue - minValue) / bucketSize) + 1;
   let allBuckets = new Array(bucketCount);
-  
+
   for (i = 0; i < allBuckets.length; i++) {
     allBuckets[i] = [];
   }
-  
+
   // Pushing values to buckets
-  arr.forEach( (currentVal) => {
-  	allBuckets[Math.floor((currentVal - minValue) / bucketSize)].push(currentVal);
+  arr.forEach(currentVal => {
+    allBuckets[Math.floor((currentVal - minValue) / bucketSize)].push(
+      currentVal
+    );
   });
 
   // Sorting buckets
   arr.length = 0;
-  
-  allBuckets.forEach((bucket) => {
-  	insertionSort(bucket);
-  	bucket.forEach((element) => {
-  		arr.push(element);
-  	});
+
+  allBuckets.forEach(bucket => {
+    insertionSort(bucket);
+    bucket.forEach(element => {
+      arr.push(element);
+    });
   });
 
   return arr;
-}
+};
+
+// option = 'asc' or 'desc' or leave blank for default ascending order
+const mergeSort = (arr, option) => {
+  if (arr.length < 2) {
+    return arr;
+  }
+
+  let midInd = Math.floor(arr.length / 2);
+  let subLeft = mergeSort(arr.slice(0, midInd), option);
+  let subRight = mergeSort(arr.slice(midInd), option);
+
+  return merge(subLeft, subRight, option);
+};
+
+const merge = (subArr1, subArr2, option) => {
+  const result = [];
+  const conditionCheck = (subArr1, subArr2) => {
+    if (option === "asc") {
+      return subArr1[0] < subArr2[0];
+    } else if (option === "desc") {
+      return subArr1[0] > subArr2[0];
+    } else {
+      return subArr1[0] < subArr2[0];
+    }
+  };
+  while (subArr1.length && subArr2.length) {
+    result.push(
+      conditionCheck(subArr1, subArr2) ? subArr1.shift() : subArr2.shift()
+    );
+  }
+  return result.concat(subArr1.length ? subArr1 : subArr2);
+};
+// ---- TEST CASE FOR MERGE SORT --------------------------------------- //
+// const input = [1, 3, 5, 6, 7, 8, 4, 2, 0];
+// console.log(mergeSort(input, "desc"));
+// --------------------------------------------------------------------- //
 
 module.exports = {
   insertionSort,
-  bucketSort
-}
+  bucketSort,
+  mergeSort
+};

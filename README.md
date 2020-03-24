@@ -18,6 +18,8 @@
 
 8. translateRomanNumeral - Outputs the input roman numeral string as number value. 
 
+9. merge - Outputs a sorted merged array eliminating all 0 values inside it. 
+
 ## ALGORITHMS [REFERENCE](https://blog.bitsrc.io/a-guide-to-javascript-algorithms-search-4d653be3dca2)
 
 1. ### Breadth First - Used mainly in Graph which uses a QUEUE (FIFO) structure.

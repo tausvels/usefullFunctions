@@ -194,6 +194,18 @@ const translateRomanNumeral = (romanNumeral) => {
   return result;
 };
 
+// MERGES TWO ARRAYS
+// num1 = [1,2,3,0,0,0]; nums2 = [2,5,6]; m = 3 and n = 3;
+// OUTPUT = [1,2,2,5,6]
+const merge = function(nums1, m, nums2, n) {
+  let i = m - 1;
+  let j = n - 1;
+  let k = m + n - 1;
+  while (j >= 0) {
+    nums1[k--] = (i >= 0 && nums1[i] > nums2[j]) ? nums1[i--] : nums2[j--];
+  }
+  return nums1;
+};
 
 module.exports = {
   bsearch,
@@ -204,5 +216,6 @@ module.exports = {
   lengthOfLongestSubstring,
   findAllConcatenatedWordsInADict,
   commonCharacters,
-  translateRomanNumeral
+  translateRomanNumeral,
+  merge
 }

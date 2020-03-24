@@ -22,6 +22,10 @@
 
 10. isPalindrome - Outputs true/false for an input NUMBER
 
+## CLASS
+
+1. ### HashSet - A class that creates a HashSet storing number values in appropriate index
+
 ## ALGORITHMS [REFERENCE](https://blog.bitsrc.io/a-guide-to-javascript-algorithms-search-4d653be3dca2)
 
 1. ### Breadth First - Used mainly in Graph which uses a QUEUE (FIFO) structure.

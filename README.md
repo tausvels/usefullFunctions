@@ -25,6 +25,7 @@
 ## CLASS
 
 1. ### HashSet - A class that creates a HashSet storing number values in appropriate index
+2. ### HashMap - A class that creates a HashMap for mappig values in specific index and replaces them with updated value
 
 ## ALGORITHMS [REFERENCE](https://blog.bitsrc.io/a-guide-to-javascript-algorithms-search-4d653be3dca2)
 

@@ -1,17 +1,17 @@
-const MyHashSet = function (maxLength = 1000, set = []) {
+const HashSet = function (maxLength = 1000, set = []) {
   this.maxLength = maxLength;
   this.set = set;
 };
 
 // prevent duplicates from being added
 // index = bucket name
-MyHashSet.prototype.getIndex = function (key) {
+HashSet.prototype.getIndex = function (key) {
   // console.log(key % this.maxLength);
   return key % this.maxLength;
 }
 
 // position = the index location of the bucket
-MyHashSet.prototype.getPos = function (key, index) {
+HashSet.prototype.getPos = function (key, index) {
   bucket = this.set[index];
   // if bucket does not exist
   if (bucket === undefined) {
@@ -20,7 +20,7 @@ MyHashSet.prototype.getPos = function (key, index) {
   return bucket.indexOf(key);
 }
 
-MyHashSet.prototype.add = function (key) {
+HashSet.prototype.add = function (key) {
   index = this.getIndex(key); // get bucket 'name'. i.e- number in this case
   pos = this.getPos(key, index); // get bucket index for given key
 
@@ -32,7 +32,7 @@ MyHashSet.prototype.add = function (key) {
   }
 };
 
-MyHashSet.prototype.remove = function (key) {
+HashSet.prototype.remove = function (key) {
   index = this.getIndex(key);
   pos = this.getPos(key, index);
   
@@ -42,15 +42,16 @@ MyHashSet.prototype.remove = function (key) {
   }
 };
 
-MyHashSet.prototype.contains = function (key) {
+HashSet.prototype.contains = function (key) {
   index = this.getIndex(key);
   pos = this.getPos(key, index);
 
   console.log(index)
   return pos > -1; // returns true if item in bucket exists
 }
+module.exports = HashSet;
 
-const myObj = new MyHashSet();
+const myObj = new HashSet();
 myObj.add(1);
 myObj.add(2); 
 myObj.add(5);
@@ -63,7 +64,7 @@ myObj.add(5)
 myObj.contains(5)
 console.log(myObj) 
 
-const hashSet = new MyHashSet();
+const hashSet = new HashSet();
 hashSet.add(1);         
 hashSet.add(2);         
 hashSet.contains(1);    console.log(hashSet.contains(1))// returns true

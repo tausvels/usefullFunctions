@@ -194,7 +194,7 @@ const translateRomanNumeral = (romanNumeral) => {
   return result;
 };
 
-// MERGES TWO ARRAYS
+// ---- MERGES TWO ARRAYS ------------------------------------------------ //
 // num1 = [1,2,3,0,0,0]; nums2 = [2,5,6]; m = 3 and n = 3;
 // OUTPUT = [1,2,2,5,6]
 const merge = function(nums1, m, nums2, n) {
@@ -206,6 +206,18 @@ const merge = function(nums1, m, nums2, n) {
   }
   return nums1;
 };
+
+// ---- CHECK NUMBER PALINDROME ----------------------------------------- //
+const isPalindrome = (x) => {
+  let revNum = 0;
+  let number = x;
+  while (number > 0) {
+    revNum = (revNum * 10) + (number % 10);
+    number = Math.floor(number / 10);
+  }
+  if (x === revNum) {return true} 
+  else {return false}
+}
 
 module.exports = {
   bsearch,

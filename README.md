@@ -18,7 +18,9 @@
 
 8. translateRomanNumeral - Outputs the input roman numeral string as number value. 
 
-9. merge - Outputs a sorted merged array eliminating all 0 values inside it. 
+9. merge - Outputs a sorted merged array eliminating all 0 values inside it.
+
+10. isPalindrome - Outputs true/false for an input NUMBER
 
 ## ALGORITHMS [REFERENCE](https://blog.bitsrc.io/a-guide-to-javascript-algorithms-search-4d653be3dca2)
 

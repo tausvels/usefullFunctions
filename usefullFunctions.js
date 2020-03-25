@@ -219,6 +219,26 @@ const isPalindrome = (x) => {
   else {return false}
 }
 
+// ---- BALANCE ARRAYS BY SUGGESTING ELEMENTS TO MOVE BETWEEN THEM ----- //
+const candySwap = (A, B) => {
+  const sum = (arr) => arr.reduce((t,c) => t+c);
+  const sumA = sum(A);
+  const sumB = sum(B);
+  const diff = (sumA - sumB) >> 1; // >> = /2 and << = *2
+
+  // using SET to utilize the '.has' property
+  const setA = new Set(A);
+  for (const candy of B) {
+    if (setA.has(candy + diff)) {
+      return [(candy + diff), candy];
+    }
+  }
+}
+// ---- TEST CASE ------------------------------------------------------- //
+/*
+  const A = [1, 2, 5], B = [2, 4]; // OUTPUT --> [5,4]. i.e- 1+2+4=7 and 2+5=7
+  const A = [1, 2], B = [2, 3];    // OUTPUT --> [1,2]. i.e- 2+2=4 and 3+1=4
+*/
 module.exports = {
   bsearch,
   arrFormatter,
@@ -229,5 +249,6 @@ module.exports = {
   findAllConcatenatedWordsInADict,
   commonCharacters,
   translateRomanNumeral,
-  merge
+  merge,
+  candySwap
 }

@@ -22,6 +22,8 @@
 
 10. isPalindrome - Outputs true/false for an input NUMBER
 
+11. candySwap - Ouputs a suggestive array of elements to move between arrays to balance them. I.e- sumOfArr1 = sumOfArr2
+
 ## CLASS
 
 1. ### HashSet - A class that creates a HashSet storing number values in appropriate index

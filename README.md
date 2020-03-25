@@ -24,6 +24,8 @@
 
 11. candySwap - Ouputs a suggestive array of elements to move between arrays to balance them. I.e- sumOfArr1 = sumOfArr2
 
+12. makeSquare - Outputs true/false for a given array by doing DFS to find out whether a square can be made using the all the elements in the array.
+
 ## CLASS
 
 1. ### HashSet - A class that creates a HashSet storing number values in appropriate index

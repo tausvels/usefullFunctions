@@ -36,3 +36,4 @@ myTree.right.right=3;
 console.log(myTree)
 console.log(isSymetric(myTree))
 */
+module.exports = isSymetric;

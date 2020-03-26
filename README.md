@@ -30,6 +30,8 @@
 
 1. ### HashSet - A class that creates a HashSet storing number values in appropriate index
 2. ### HashMap - A class that creates a HashMap for mappig values in specific index and replaces them with updated value
+3. ### BETTER BINARY SEARCH TREE CLASS [REFERENCE](https://www.geeksforgeeks.org/implementation-binary-search-tree-javascript/)
+- See code (also contains Inorder, PreOrder and PostOrder Algo)
 
 ## ALGORITHMS [REFERENCE](https://blog.bitsrc.io/a-guide-to-javascript-algorithms-search-4d653be3dca2)
 
@@ -59,5 +61,5 @@ This algorithm also uses the queue data structure to make note of all the nodes 
 - InsertionSort: Outputs a sorted array (smallest to largest). TC: O(n); SC: O(1)
 - MergeSort: Outputs a sorted array (option to change order of sort using 'asc' or 'desc') TC: O(nlogn); SC: O(n)
 
-6. ### BETTER BINARY SEARCH TREE CLASS [REFERENCE](https://www.geeksforgeeks.org/implementation-binary-search-tree-javascript/)
-- See code (also contains Inorder, PreOrder and PostOrder Algo)
+6. ### ADDED A GRAPH CRITICAL CONNECTION ALGO
+- Outputs the most critical connection in pair of nodes in a graph. Performs DFS.

@@ -1,3 +1,4 @@
+const isSymteric = require('./isSymetric');
 // Node class
 class Node {
   constructor(data) {
@@ -12,7 +13,7 @@ class BinarySearchTree {
     // ROOT OF THE BST
     this.root = null;
   };
-
+  isSymteric(data) {return isSymteric(data)};
   insert(data) {
     // Creating the ndoe and initializing with data
     const newNode = new Node(data);
@@ -160,18 +161,18 @@ class BinarySearchTree {
 
 };
 
-const BST = new BinarySearchTree();
+// const BST = new BinarySearchTree();
 
-BST.insert(15); 
-BST.insert(25); 
-BST.insert(10); 
-BST.insert(7); 
-BST.insert(22); 
-BST.insert(17); 
-BST.insert(13); 
-BST.insert(5); 
-BST.insert(9); 
-BST.insert(27);
+// BST.insert(15); 
+// BST.insert(25); 
+// BST.insert(10); 
+// BST.insert(7); 
+// BST.insert(22); 
+// BST.insert(17); 
+// BST.insert(13); 
+// BST.insert(5); 
+// BST.insert(9); 
+// BST.insert(27);
 
 // CREATES THE FOLLOWING BST
 //          15 
@@ -183,7 +184,9 @@ BST.insert(27);
 //    5   9  17  
 
 
-let root = BST.getRootNode();
-BST.remove(5);
-root = BST.getRootNode();
-BST.inorder(root)
+// let root = BST.getRootNode();
+// BST.remove(5);
+// root = BST.getRootNode();
+// BST.inorder(root)
+
+module.exports = BinarySearchTree;

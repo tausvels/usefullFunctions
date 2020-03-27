@@ -26,6 +26,8 @@
 
 12. makeSquare - Outputs true/false for a given array by doing DFS to find out whether a square can be made using the all the elements in the array.
 
+13. suggestedProducts - Outputs 3 suggested products from a given array of products given a search word.
+
 ## CLASS
 
 1. ### HashSet - A class that creates a HashSet storing number values in appropriate index
@@ -41,7 +43,6 @@ This algorithm also uses the queue data structure to make note of all the nodes 
 
 - ![GRAPH](https://github.com/tausvels/usefullFunctions/blob/master/screenshots/graph.PNG "GRAPH")
 - usage: grpah.breadthFirst('c', node => {console.log(node.id)}) ====>> c, d, e, f
-
 2. ### DEPTH FIRST SEARCH - USED mainly for Tree which uses a STACK (LIFO) structure.
 - Depth first algorithm is a traversal algorithm that starts searching at one node, and then goes down the path of its neighboring nodes before it goes to the other paths.
 - useage: graph.depthFirst('a', node => console.log(node.id)) =====>> a, c, d, e, f

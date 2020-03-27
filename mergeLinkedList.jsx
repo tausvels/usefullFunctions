@@ -33,5 +33,3 @@ l2.next = new ListNode(3);
 l2.next.next = new ListNode(4);
 
 console.log(mergeTwoLists(l1, l2))
-
-console.log(3 < 2)

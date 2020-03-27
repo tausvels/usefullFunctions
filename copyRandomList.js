@@ -1,3 +1,4 @@
+// OUTPUTS AN ARRAY OF LISTNODES WHERE POINTER IS AT RANDOM //
 const copyRandomList = (head) => {
   let map = new Map ();
 

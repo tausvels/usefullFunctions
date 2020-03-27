@@ -34,6 +34,8 @@
 2. ### HashMap - A class that creates a HashMap for mappig values in specific index and replaces them with updated value
 3. ### BETTER BINARY SEARCH TREE CLASS [REFERENCE](https://www.geeksforgeeks.org/implementation-binary-search-tree-javascript/)
 - See code (also contains Inorder, PreOrder and PostOrder Algo)
+- Added <strong>isSymetric method</strong> that outputs true/false if a tree is symetric.
+- Added <strong>isSubtree method</strong> that outputs true/false if a given tree is a subTree of another tree.
 
 ## ALGORITHMS [REFERENCE](https://blog.bitsrc.io/a-guide-to-javascript-algorithms-search-4d653be3dca2)
 

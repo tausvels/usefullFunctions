@@ -28,6 +28,8 @@
 
 13. suggestedProducts - Outputs 3 suggested products from a given array of products given a search word.
 
+14. searchMatrix - Outputs true/false if target value is found in a (n * m) matrix. Uses Binary Search Algo. 
+
 ## CLASS
 
 1. ### HashSet - A class that creates a HashSet storing number values in appropriate index

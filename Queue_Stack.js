@@ -1,3 +1,4 @@
+// ---- QUEUE ------------------------------------------------ //
 const Queue = function () {
   this.storage = {};
   this.count = 0;

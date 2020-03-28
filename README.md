@@ -32,6 +32,7 @@
 
 15. spiralOrder - Outputs an array spirally from the given input of n * m matrix. 
 
+16. mostCommonWord - Outputs the most common word in a string. Filters words/characters in BANNED variable. banned = ['hit'].
 ## CLASS
 
 1. ### HashSet - A class that creates a HashSet storing number values in appropriate index

@@ -26,9 +26,11 @@
 
 12. makeSquare - Outputs true/false for a given array by doing DFS to find out whether a square can be made using the all the elements in the array.
 
-13. suggestedProducts - Outputs 3 suggested products from a given array of products given a search word.
+13. suggestedProducts - Outputs 3 suggesed products from a given array of products given a search word.
 
 14. searchMatrix - Outputs true/false if target value is found in a (n * m) matrix. Uses Binary Search Algo. 
+
+15. spiralOrder - Outputs an array spirally from the given input of n * m matrix. 
 
 ## CLASS
 

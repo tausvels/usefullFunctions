@@ -347,6 +347,42 @@ console.log(searchMatrix(input, 1));
 */
 // --------------------------------------- //
 
+// ---- SPIRAL MATRIX -------------------- //
+// OUTPUTS AN ARRAY SPIRALLY FROM THE GIVEN INPUT n * m MATRIX
+const spiralOrder = (matrix) => {
+  let 
+    n = matrix.length,
+    m = (matrix[0] || []).length,
+    res = [],
+    x1 = 0,
+    x2 = m - 1,
+    y1 = 0,
+    y2 = n - 1
+  while (x1 <= x2 && y1 <= y2) {
+    for (var x = x1; x <= x2; x++) res.push(matrix[y1][x]);
+    for (var y = y1 + 1; y <= y2; y++) res.push(matrix[y][x2]);
+    if (x1 < x2 && y1 < y2) {
+      for (var x = x2 - 1; x > x1; x--) res.push(matrix[y2][x]);
+      for (var y = y2; y > y1; y--) res.push(matrix[y][x1]);
+    }
+    x1++;
+    x2--;
+    y1++;
+    y2--;
+  }
+  return res;
+};
+// ---- TEST CASE ------------------------ //
+/*
+const Input = 
+[
+ [ 1, 2, 3 ],
+ [ 4, 5, 6 ],
+ [ 7, 8, 9 ]
+];
+console.log(spiralOrder(Input))
+*/
+
 module.exports = {
   bsearch,
   arrFormatter,
@@ -361,5 +397,6 @@ module.exports = {
   candySwap,
   makeSquare,
   suggestedProducts,
-  searchMatrix
+  searchMatrix,
+  spiralOrder
 }

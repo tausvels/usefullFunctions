@@ -73,3 +73,7 @@ console.log(test.storage)
 */
 // ---------------------------------------------------------- //
 
+module.exports = {
+  Queue,
+  Stack
+}

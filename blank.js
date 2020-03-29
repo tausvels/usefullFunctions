@@ -1,37 +1,30 @@
-const Queue = function () {
-  this.storage = {};
-  this.count = 0;
-  this.lowestCount = 0;
-};
-
-Queue.prototype.enqueue = function(val) {
-  if (val) {
-    this.storage[this.count] = val;
-    this.count++
+const bubbleSort = (arr, option) => {
+  const arrCopy = arr.slice();
+  const length = arrCopy.length - 1;
+  const conditionCheck = (arrCopy) => {
+    if (option === "asc") {
+      return arrCopy[i] > arrCopy[i+1];
+    } else if (option === "desc") {
+      return arrCopy[i] < arrCopy[i+1];
+    } else {
+      return arrCopy[i] > arrCopy[i+1];
+    }
+  };
+  do {
+    var swapped = false;
+    for(var i = 0; i < length; i++) {
+      if (conditionCheck(arrCopy)) {
+        let temp = arrCopy[i];
+        arrCopy[i] = arrCopy[i+1];
+        arrCopy[i+1] = temp;
+        swapped = true;
+      }
+    }
   }
-};
-
-Queue.prototype.dequeue = function() {
-  if (this.count - this.storage[this.lowestCount] === 0) {
-    return undefined;
-  }
-  let result = this.storage[this.lowestCount];
-  delete this.storage[this.lowestCount];
-  this.lowestCount++;
-  return result;
-};
-
-Queue.prototype.size = function() {
-  return this.count - this.lowestCount;
+  while(swapped === true);
+  return arrCopy;
 }
 
-// ---- TEST CASE ------------------------------------------- //
-/**
- * const test = new Queue();
-test.enqueue(1); test.enqueue(4); test.enqueue(5); test.enqueue(9); 
-test.enqueue(7); test.enqueue(9);
-test.dequeue();
-console.log(test.size())
-console.log(test.storage)
- */
-// ---------------------------------------------------------- //
+
+const input = [5,1,4,3,9];
+console.log(bubbleSort(input, 'desc'))

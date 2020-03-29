@@ -97,7 +97,6 @@ const merge = (subArr1, subArr2, option) => {
   return result.concat(subArr1.length ? subArr1 : subArr2);
 };
 // ---- TEST CASE FOR MERGE SORT --------------------------------------- //
-const input = [1, 3, 5, 6, 7, 8, 4, 2, 0];
 // console.log(mergeSort(input, "desc"));
 // --------------------------------------------------------------------- //
 
@@ -128,11 +127,28 @@ const bubbleSort = (arr, option) => {
   while(swapped === true);
   return arrCopy;
 }
-console.log(bubbleSort(input, 'desc'));
+// console.log(bubbleSort(input, 'desc'));
+
+// ---- QUICK SORT ------------------------ //
+const quickSort = (arr) => {
+  // BASE CASE //
+  if (arr.length < 2) {
+    return arr;
+  }
+  let [head, ...tail] = arr;
+  return [
+    ...quickSort(tail.filter(element => element < head)),
+    head,
+    ...quickSort(tail.filter(element => element > head))
+  ];
+}
 
 module.exports = {
   insertionSort,
   bucketSort,
   mergeSort,
-  bubbleSort
+  bubbleSort,
+  quickSort
 };
+
+// const input = [1, 3, 5, 6, 7, 8, 4, 2, 0];

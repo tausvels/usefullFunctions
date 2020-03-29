@@ -68,6 +68,7 @@ This algorithm also uses the queue data structure to make note of all the nodes 
 - BucketSort: Outputs a sorted array (smallest to largest). TC: O(n^2); SC: O(n+k)--> k = no. of buckets which is usally 10 for INT and 26 for alphabets.
 - InsertionSort: Outputs a sorted array (smallest to largest). TC: O(n); SC: O(1)
 - MergeSort: Outputs a sorted array (option to change order of sort using 'asc' or 'desc') TC: O(nlogn); SC: O(n)
+- QuickSort: Outputs a sorted array.TC: O(nlogn) WORST CASE: (n^2); SC: O(n)
 
 6. ### ADDED A GRAPH CRITICAL CONNECTION ALGO
 - Outputs the most critical connection in pair of nodes in a graph. Performs DFS.

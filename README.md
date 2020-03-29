@@ -41,6 +41,8 @@
 - See code (also contains Inorder, PreOrder and PostOrder Algo)
 - Added <strong>isSymetric method</strong> that outputs true/false if a tree is symetric.
 - Added <strong>isSubtree method</strong> that outputs true/false if a given tree is a subTree of another tree.
+4. ### HEAPSORT- A class that creates a Binary tree and performs two forms of sorting (Min --> Max and Max --> Min)
+- See code for example use case
 
 ## ALGORITHMS [REFERENCE](https://blog.bitsrc.io/a-guide-to-javascript-algorithms-search-4d653be3dca2)
 

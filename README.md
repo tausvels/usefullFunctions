@@ -36,6 +36,8 @@
 
 17. gcd - Outputs the Greatest Common Divisor of a given list of integers. Takes in 2 arguments where 1st Arg--> [list of numbers], 2nd Arg(optional) --> Total number of items in the list.
 
+18. reorderLogFile - Outputs an array of reordered log file lines from lowest to highest.
+
 
 ## CLASS
 

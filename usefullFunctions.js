@@ -439,6 +439,31 @@ const gcd = (arr, num) => {
 // console.log(gcd(input))
 // ----------------------------- //
 
+// ---- REORDER LOG FILES FROM LOWEST TO HIGHEST ----------- //
+var reorderLogFiles = function(logs) {
+  let lettersArr = [];
+  const digitsArr = [];
+  
+  for (let i = 0; i < logs.length; i += 1) {
+    const [id, secondWord] = logs[i].split(' ');
+    
+    if (Number.isInteger(+secondWord)) {
+      digitsArr.push(logs[i]);
+    } else {
+      lettersArr.push(logs[i]);
+    }
+  }
+  
+  lettersArr = lettersArr.sort((a, b) => {
+    const [, ...aRest] = a.split(' ');
+    const [, ...bRest] = b.split(' ');
+    
+    return aRest.join(' ') >= bRest.join(' ') ? 1 : -1;
+  });
+  
+  return [...lettersArr, ...digitsArr];
+};
+
 module.exports = {
   bsearch,
   arrFormatter,
@@ -456,5 +481,6 @@ module.exports = {
   searchMatrix,
   spiralOrder,
   mostCommonWord,
-  gcd
+  gcd,
+  reorderLogFiles
 }

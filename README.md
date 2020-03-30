@@ -33,6 +33,10 @@
 15. spiralOrder - Outputs an array spirally from the given input of n * m matrix. 
 
 16. mostCommonWord - Outputs the most common word in a string. Filters words/characters in BANNED variable. banned = ['hit'].
+
+17. gcd - Outputs the Greatest Common Divisor of a given list of integers. Takes in 2 arguments where 1st Arg--> [list of numbers], 2nd Arg(optional) --> Total number of items in the list.
+
+
 ## CLASS
 
 1. ### HashSet - A class that creates a HashSet storing number values in appropriate index

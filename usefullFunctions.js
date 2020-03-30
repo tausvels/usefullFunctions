@@ -406,6 +406,39 @@ const banned = ["Hit"];
 console.log(mostCommonWord(paragraph, banned));
 */
 
+// ---- GREATEST COMMON DIVISOR (HCF) OF A GIVEN LIST OF NUMBERS ---------- //
+const gcd = (arr, num) => {
+  // sort the array from lowest to highest
+  arr.sort((a,b) => a-b);
+  const lowest = arr[0]
+  const factors = []; 
+  let size = num;
+  if (!size) {
+    size = arr.length;
+  } else if (size !== arr.length) {
+    size = arr.length;
+  }
+  for (let i = 1; i <= lowest; i++) {
+    if (lowest % i === 0) {
+      factors.push(i);
+    }
+  }
+  for (let j = 1; j < size; j++) {
+    for (let k = 0; k < factors.length; k++) {
+      if (arr[j] % factors[k] !== 0) {
+        factors.splice(k, 1)
+      }
+    }
+  }
+  console.log(factors)
+  return factors[factors.length - 1];
+}
+
+// ---- TEST CASE -------------- //
+// const input = [1,2,3,4,5];
+// console.log(gcd(input))
+// ----------------------------- //
+
 module.exports = {
   bsearch,
   arrFormatter,
@@ -422,5 +455,6 @@ module.exports = {
   suggestedProducts,
   searchMatrix,
   spiralOrder,
-  mostCommonWord
+  mostCommonWord,
+  gcd
 }

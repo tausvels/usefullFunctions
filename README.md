@@ -38,6 +38,7 @@
 
 18. reorderLogFile - Outputs an array of reordered log file lines from lowest to highest.
 
+19. fibonacci(n) - Outputs the the nth element of the fibonacci sequence.
 
 ## CLASS
 

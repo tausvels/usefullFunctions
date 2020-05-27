@@ -464,6 +464,18 @@ var reorderLogFiles = function(logs) {
   return [...lettersArr, ...digitsArr];
 };
 
+//---- Finding the nth element of the Fibonacci Sequence ------------- //
+// nth element of the fibonacci sequence
+const fibonacci = n => {
+  // recursive case
+  if (n >= 3) {
+    return fibonacci(n-1) + fibonacci(n-2) // sum of previous 2 values
+  }
+  // base case 
+  return 1; // n = 1
+}
+// fibonacci(32)
+//-------------------------------------------------------------------- //
 module.exports = {
   bsearch,
   arrFormatter,
@@ -482,5 +494,6 @@ module.exports = {
   spiralOrder,
   mostCommonWord,
   gcd,
-  reorderLogFiles
+  reorderLogFiles,
+  fibonacci
 }

@@ -476,6 +476,32 @@ const fibonacci = n => {
 }
 // fibonacci(32)
 //-------------------------------------------------------------------- //
+// ---- Number of Jumps required to reach the finish line ------------ //
+// nth element of the fibonacci sequence
+const numberOfJumps = (feet, jumpLength) => {
+  let count;
+  if (feet >= 2) {
+    if (jumpLength === 2) {
+      return 1 + numberOfJumps((feet - 2), jumpLength)
+    } else {
+      return 1 + numberOfJumps((feet - 1), jumpLength)
+    }
+  }
+  // base case
+  else {
+    if (jumpLength === 1) {
+      return 1;
+    } else {
+      if (feet % 2 !== 0) {
+        return 1;
+      } else {
+        return 0;
+      }
+    }
+  }
+}
+// numberOfJumps(10, 2) -->> Outputs 5
+// ----------------------------------------------------------------------- //
 module.exports = {
   bsearch,
   arrFormatter,
@@ -495,5 +521,6 @@ module.exports = {
   mostCommonWord,
   gcd,
   reorderLogFiles,
-  fibonacci
+  fibonacci,
+  numberOfJumps
 }

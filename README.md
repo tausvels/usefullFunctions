@@ -40,6 +40,8 @@
 
 19. fibonacci(n) - Outputs the the nth element of the fibonacci sequence. [Reference](https://www.youtube.com/watch?v=B0NtAFf4bvU&list=PLBZBJbE_rGRV8D7XZ08LK6z-4zPoWzu5H&index=6)
 
+20. numberOfJumps - Outputs the total number of jumps required to reach the finish line. Takes arg1 = feet (e.g.- 6 feet) and arg2 = jumpLength (e.g- 1 feet)
+
 ## CLASS
 
 1. ### HashSet - A class that creates a HashSet storing number values in appropriate index

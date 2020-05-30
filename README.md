@@ -81,6 +81,7 @@ This algorithm also uses the queue data structure to make note of all the nodes 
 - InsertionSort: Outputs a sorted array (smallest to largest). TC: O(n); SC: O(1)
 - MergeSort: Outputs a sorted array (option to change order of sort using 'asc' or 'desc') TC: O(nlogn); SC: O(n)
 - QuickSort: Outputs a sorted array.TC: O(nlogn) WORST CASE: (n^2); SC: O(n)
+- HeapSort: Outputs a sorted array. TC: O(nlogn) WORST CASE: O(nlogn) SC: 1 (Reference)[https://www.geeksforgeeks.org/heap-sort/]
 
 6. ### ADDED A GRAPH CRITICAL CONNECTION ALGO
 - Outputs the most critical connection in pair of nodes in a graph. Performs DFS.

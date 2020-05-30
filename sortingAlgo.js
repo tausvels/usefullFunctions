@@ -143,12 +143,52 @@ const quickSort = (arr) => {
   ];
 }
 
+// ---- HEAP SORT ------------------------- //
+function heapSort(input) {
+  // ---- HELPER FUNCTIONS ----------------------------------------- //
+  function swap(input, index_A, index_B) {
+    let temp = input[index_A];
+    input[index_A] = input[index_B];
+    input[index_B] = temp;
+  }
+  function heap_root(input, i) {
+    let left = 2 * i + 1; // left child
+    let right = 2 * i + 2; // right child
+    let max = i; // parent node
+  
+    if (left < array_length && input[left] > input[max]) {max = left}
+    if (right < array_length && input[right] > input[max]) {max = right}
+    
+    if (max !== i) {
+      swap(input, i, max);
+      heap_root(input, max)
+    }
+  }
+  // ------------------------------------------------------------- //
+  let array_length = input.length;
+  for (let i = Math.floor(array_length / 2); i >= 0; i -= 1) {
+    heap_root(input, i)
+  }
+  for (let i = input.length - 1; i > 0; i--) {
+    swap(input, 0, i);
+    array_length--;
+    heap_root(input, 0)
+  }
+}
+
+// ---- TEST CASE ----------------------- //
+// const input = [3,0,2,5,-1,4,1,3];
+// heapSort(input)
+// console.log(input)
+// ---------------------------------------- //
+
 module.exports = {
   insertionSort,
   bucketSort,
   mergeSort,
   bubbleSort,
-  quickSort
+  quickSort,
+  heapSort
 };
 
 // const input = [1, 3, 5, 6, 7, 8, 4, 2, 0];

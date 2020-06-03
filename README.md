@@ -42,6 +42,8 @@
 
 20. numberOfJumps - Outputs the total number of jumps required to reach the finish line. Takes arg1 = feet (e.g.- 6 feet) and arg2 = jumpLength (e.g- 1 feet)
 
+21. maxSubArr - Outputs the largest sum of contiguous integers in the array.
+
 ## CLASS
 
 1. ### HashSet - A class that creates a HashSet storing number values in appropriate index

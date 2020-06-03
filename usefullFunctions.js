@@ -502,6 +502,20 @@ const numberOfJumps = (feet, jumpLength) => {
 }
 // numberOfJumps(10, 2) -->> Outputs 5
 // ----------------------------------------------------------------------- //
+// ---- MAX SUB ARRAY MAX SUM -------------------------------------------- //
+const maxSubArr = (arr) => {
+  let max = arr[0];
+  let currentMax = arr[0];
+  for (let i = 1; i < arr.length; i++) {
+    currentMax = Math.max(arr[i], currentMax + arr[i]);
+    max = Math.max(max, currentMax)
+  }
+  return max;
+}
+// ---- TEST CASE ---------------------------- //
+// const input = [-2, -3, 4, -1, -2, 1, 5, -3]; 
+// maxSubArr(input)
+// ------------------------------------------- //
 module.exports = {
   bsearch,
   arrFormatter,
@@ -522,5 +536,6 @@ module.exports = {
   gcd,
   reorderLogFiles,
   fibonacci,
-  numberOfJumps
+  numberOfJumps,
+  maxSubArr
 }

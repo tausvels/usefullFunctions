@@ -563,6 +563,25 @@ const appearTwice = arr => {
 // const input = [1,2, 3,3, 3,4,5,6]
 // appearTwice(input) // --> OUTPUTS 3
 // ------------------------------------------------- //
+// ---- COMPUTE CHANGE ----------------------------- //
+
+function computeChange(coins, amount) {
+  var i = 0;
+  let coincount = coins.map(function () { return 0; }); // returns an array and for each element of coins zero
+  while (i < coins.length) {
+    while (coins[i] <= amount) {
+      amount -= coins[i];
+      coincount[i]++;
+    }
+    i++;
+  }
+  return coincount;
+}
+// ---- TEST CASE ----------------------------------- //
+// const coins = [50, 25, 10, 5, 1];
+// const total = 100; //137
+// computeChange(coins, total) // --> returns [2,0,0,0,0]
+// -------------------------------------------------- //
 module.exports = {
   bsearch,
   arrFormatter,
@@ -587,5 +606,6 @@ module.exports = {
   maxSubArr,
   shuffleArr,
   missingNumber,
-  appearTwice
+  appearTwice,
+  computeChange
 }

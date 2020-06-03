@@ -49,6 +49,8 @@
 23. missingNumer - Outputs the first missing number of the array. e.g- missingNumber([1,2,4,5,6]) would output --> 3
 
 24. appearTwice - Outputs the number that appears twice in a sorted array. e.g - appearTwice([1,2, 3,3, 3,4,5,6]) --> 3
+
+25. computeChange - Outputs the number of coins used (from largest to smallest) to reach a total amount. e.g-computeChange(coins=[50,25,10,5,1], total=100) --> [2,0,0,0,0]
 ## CLASS
 
 1. ### HashSet - A class that creates a HashSet storing number values in appropriate index

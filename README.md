@@ -44,6 +44,11 @@
 
 21. maxSubArr - Outputs the largest sum of contiguous integers in the array.
 
+22. shuffleArr - Modifies the given array by swapping the position of each item randomly.
+
+23. missingNumer - Outputs the first missing number of the array. e.g- missingNumber([1,2,4,5,6]) would output --> 3
+
+24. appearTwice - Outputs the number that appears twice in a sorted array. e.g - appearTwice([1,2, 3,3, 3,4,5,6]) --> 3
 ## CLASS
 
 1. ### HashSet - A class that creates a HashSet storing number values in appropriate index

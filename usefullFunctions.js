@@ -516,6 +516,53 @@ const maxSubArr = (arr) => {
 // const input = [-2, -3, 4, -1, -2, 1, 5, -3]; 
 // maxSubArr(input)
 // ------------------------------------------- //
+// ---- SHUFFLE AN ARRAY --------------------- //
+const shuffleArr = arr => {
+  for (let i = 0; i < arr.length; i++) {
+    let rand = i + Math.floor(Math.random() * (arr.length - i));
+    
+    // --- swapping ---- //
+    let temp = arr[rand]
+    arr[rand] = arr[i]
+    arr[i] = temp;
+  }
+};
+// ------------------------------------------ //
+// ---- FIND THE MISSING INTERGER IN THE ARRAY ----- //
+const missingNumber = (arr) => {
+  // approach 1 (no overflow considered) //
+  let total = ((arr.length + 1)*(arr.length + 2))/2 // <-- natural sum of the array
+  for (let i = 0; i < arr.length; i++) {
+    total -= arr[i]
+  }
+
+  // approach 2 (with overflow considered) //
+  /*
+  let total = 1;
+  for (let i = 2; i < (arr.length + 1); i++) {
+    total += i;
+    total -= arr[i - 2]
+  }
+  */
+
+  return total;
+}
+// ---- TEST CASE ---------------------------------- //
+// const input = [1, 2, 4, 5, 6];
+// missingNumber(input) // --> output 3
+// ------------------------------------------------- //
+// ---- NUMBER APPEARING TWICE IN AN ARRAY (SORTED)  //
+const appearTwice = arr => {
+  const n = arr.length;
+  const naturalSumOfArr = ((n-2)*(n-1))/2;
+  const sumOfArr = arr.reduce((acc, curr) => {return acc+curr}, 0);
+  const extraNumber = (sumOfArr - naturalSumOfArr) / 2
+  return extraNumber;
+}
+// ---- TEST CASE ---------------------------------- //
+// const input = [1,2, 3,3, 3,4,5,6]
+// appearTwice(input) // --> OUTPUTS 3
+// ------------------------------------------------- //
 module.exports = {
   bsearch,
   arrFormatter,
@@ -537,5 +584,8 @@ module.exports = {
   reorderLogFiles,
   fibonacci,
   numberOfJumps,
-  maxSubArr
+  maxSubArr,
+  shuffleArr,
+  missingNumber,
+  appearTwice
 }

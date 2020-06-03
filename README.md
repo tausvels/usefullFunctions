@@ -85,3 +85,6 @@ This algorithm also uses the queue data structure to make note of all the nodes 
 
 6. ### ADDED A GRAPH CRITICAL CONNECTION ALGO
 - Outputs the most critical connection in pair of nodes in a graph. Performs DFS.
+
+## NODE FUNCTIONS
+- Added a promise function that can resolve an array of promises both parallely & sequentially. Uses setTimeout to mimic a promise response.

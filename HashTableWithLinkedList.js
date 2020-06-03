@@ -51,7 +51,7 @@ class HashTable {
   };
   //---- Hashing function ----------------------------------------------- //
   hash(key){
-    var id = 0;
+    let id = 0;
     for (let i = 0; i < key.length; i++) {
       id += key.charCodeAt(i) * 100 - key.charCodeAt(i - 1 < 0 ? 0 : i - 1);
     }

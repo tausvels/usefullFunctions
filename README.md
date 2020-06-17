@@ -51,6 +51,11 @@
 24. appearTwice - Outputs the number that appears twice in a sorted array. e.g - appearTwice([1,2, 3,3, 3,4,5,6]) --> 3
 
 25. computeChange - Outputs the number of coins used (from largest to smallest) to reach a total amount. e.g-computeChange(coins=[50,25,10,5,1], total=100) --> [2,0,0,0,0]
+
+26. numOfWays - Outputs the number of ways to reach the top with step size 1 or 2; e.g- numOfWays(4) --> 3 ways.
+
+27. numOfWaysX - Outputs the number of ways to reach the top with given step sizes in an array; e.g- numOfWaysX(6) --> 8 ways.
+
 ## CLASS
 
 1. ### HashSet - A class that creates a HashSet storing number values in appropriate index

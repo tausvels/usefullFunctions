@@ -582,6 +582,48 @@ function computeChange(coins, amount) {
 // const total = 100; //137
 // computeChange(coins, total) // --> returns [2,0,0,0,0]
 // -------------------------------------------------- //
+
+// ---- Finds all the ways to reach the top of a stair case (step size = 1 or 2)
+function numOfWays (n) {
+  // base case //
+  if (n === 0 || n === 1) {return 1}
+  // defining the size of the array //
+  const nums = Array(n + 1);
+  // recognizing the base case
+  nums[0] = 1; nums[1] = 1;
+  for (let i = 2; i <= n; i++) {
+    nums[i] = nums[i-1] + nums[i - 2]
+  }
+  return nums[n]
+}
+// ---- TEST CASE ----------------- //
+// numOfWays(4) ---> returns 3 as there are 3 ways to reach the top either taking 1 or 2 steps
+
+// ---- FINDS THE WAYS TO REACH THE TOP OF A STAIR CASE GIVEN NUMBER OF STEPS AND STEP SIZES
+function numOfWaysX (n, steps = [1,3,5]) {
+  // base case //
+  if (n === 0 || n === 1) {return 1}
+  const nums = Array(n + 1);
+  // recognizing the base case
+  nums[0] = 1;
+  for (let i = 1; i <= n; i++) {
+    let total = 0;
+
+    // looping over the step sizes
+    for (let j of steps) {
+      // total should be added on if the index val is not -ve
+      if (i - j >= 0) {
+        total += nums[i - j]
+      }
+    }
+
+    nums[i] = total;
+  }
+  return nums[n]
+}
+// ---- TEST CASE ----------------- //
+// numOfWays(4) ---> returns 3 as there are 3 ways to reach the top either taking 1,3 or 5 steps
+
 module.exports = {
   bsearch,
   arrFormatter,
@@ -607,5 +649,7 @@ module.exports = {
   shuffleArr,
   missingNumber,
   appearTwice,
-  computeChange
+  computeChange,
+  numOfWays,
+  numOfWaysX
 }

@@ -1,0 +1,43 @@
+.navigation {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: rgba(126, 124, 124, 0.41);;
+  display: inline-block;
+}
+.logo {
+  clear: both;
+  display: inline-block;
+  padding: 10px;
+}
+.logo a, .nav-container li a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  transition: 0.2s;
+  font-weight: 500;
+  display: block;
+  padding: 15px;
+  border-radius: 5px;
+}
+.logo a:active {
+  color: yellow;
+}
+.logo a:hover, .nav-container li a:hover {
+  color: rgb(89, 219, 29);
+  opacity: 0.7;
+  box-shadow: 10px 5px 5px 2px rgba(86, 126, 126, 0.71);
+}
+.nav-container {
+  display: inline-block;
+  float: right;
+}
+.nav-container li {
+  list-style: none;
+  display: inline-block;
+  padding: 10px;
+}
+.nav-container li a:active {
+  color: aqua;
+}

@@ -2,6 +2,8 @@
   width: 100%;
   background: rgba(126, 124, 124, 0.41);;
   display: inline-block;
+  position: sticky;
+  top: 0;
 }
 .logo {
   clear: both;

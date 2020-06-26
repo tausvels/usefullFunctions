@@ -13,3 +13,19 @@ body {
   background-size: contain;
   background-repeat: repeat-x;
 }
+.test2 {
+  border: 2px solid red;
+  display: flex;
+  align-items: center;
+}
+.test2-content {
+  padding: 10px;
+  display: flex;
+  flex: 1;
+  justify-content: flex-end 
+}
+.test2 button {
+  height: 30px;
+  margin: 10px;
+  justify-content: flex-start;
+}

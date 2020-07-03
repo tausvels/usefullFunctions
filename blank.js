@@ -57,10 +57,14 @@ Node.prototype.search = function(val) {
     
 }
 // ------------------TEST CASE-------------------------------- //
-const input = [7,4,5,7,9,10, 20, 3, 5]
-const myTree = new Tree();
-for (num of input) {
-  myTree.addValue(num)
-}
-const sorted = myTree.traverse()
+// const input = [7,4,5,7,9,10, 20, 3, 5]
+// const myTree = new Tree();
+// for (num of input) {
+//   myTree.addValue(num)
+// }
+// const sorted = myTree.traverse()
 // console.log(myTree)
+
+function sum(a, b) {
+  return a + b;
+}

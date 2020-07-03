@@ -24,51 +24,25 @@
       </ul>
     </nav>
     <!-- MAIN BODY-->
-    <div class='main'>
-      <div id="test">
-        <input id='btn' type='button' value='ShOW TIME'></input>
-      </div>
-      <div>
-        <h1 class='output' style='display: none;'></h1>  
-      </div>
+    <div class="container">
+      <div class="sidebar"></div>
+      <div class='main'>
 
-      <div class='test2' style="display: flex; margin: 10px;">
-        <button>Display</button>
-        <div class='test2-content'>
-          <p >Test1</p>
-          <p >Test2</p>
-          <p >Test3</p>
+        <div class="clock-section">
+          <div id="clock-container">
+            <input id='show-time-btn' type='button' value='ShOW TIME'></input>
+          </div>
+          <div>
+            <h1 class='show-clock' style='display: none;'></h1>  
+          </div>
         </div>
+        
       </div>
+      <div class="sidebar"></div>
     </div>
 
 
     <script src="./testScript.js"></script>
-    <script>
-      let clock = setInterval(getTiming, 1000);
-      function getTiming(){
-        const d = new Date();
-        return document.querySelector('.output').innerHTML = d.toLocaleTimeString();
-      }
-      const btn = document.querySelector('#btn');
-      btn.addEventListener('click', ()=>{
-        let displayContainer = document.querySelector('.output');
-        if (displayContainer.style.display === 'none') {
-          displayContainer.style.display = 'block';
-          btn.value = 'HIDE TIME';
-        } else {
-          displayContainer.style.display = 'none';
-          btn.value = 'SHOW TIME'
-        } 
-      })
-      function attSetter(elm, att) {
-        for (const at in att) {
-          elm.setAttribute(at, att[at])
-        }
-      }
-      const testParent = document.querySelector('.test2');
-      const allPTags = testParent.children;
-      console.log(allPTags[1])
-    </script>
+    <script src="./showTime.js"></script>
   </body>
 </html>

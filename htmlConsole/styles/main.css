@@ -1,3 +1,4 @@
+* {box-sizing: border-box;}
 body {
   background-color: black;
   font-family: 'Lato', sans-serif;
@@ -13,19 +14,30 @@ body {
   background-size: contain;
   background-repeat: repeat-x;
 }
-.test2 {
-  border: 2px solid red;
+.container {
+  border: 1px solid red;
   display: flex;
-  align-items: center;
 }
-.test2-content {
-  padding: 10px;
-  display: flex;
-  flex: 1;
-  justify-content: flex-end 
+.sidebar {
+  flex: 10%; border: 1px solid blue;
 }
-.test2 button {
-  height: 30px;
-  margin: 10px;
-  justify-content: flex-start;
+.main {
+  flex: 70%; border: 1px solid yellow;
+  padding: 2em 2em;
+}
+
+#show-time-btn {
+  padding: 10px 10px;
+  background: rgb(131, 8, 14);
+  border-radius: 5px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  transition: ease-out 0.3s;
+}
+#show-time-btn:hover {
+  box-shadow: 10px 5px 5px 2px rgba(86, 126, 126, 0.71);
+  transform: translateZ(0);
+  -webkit-font-smoothing: antialiased;
 }

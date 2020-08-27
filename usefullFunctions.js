@@ -37,7 +37,7 @@ function arrSorterAscToDsc (arr, objProp) {
       comparison = -1
     }
   
-    return comparison;
+    return comparison
   }
     return arr.sort(compare)
   }

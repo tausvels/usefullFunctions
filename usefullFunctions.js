@@ -34,7 +34,7 @@ function arrSorterAscToDsc (arr, objProp) {
     if (objA > objB) {
       comparison = 1;
     } else if (objA < objB){
-      comparison = -1;
+      comparison = -1
     }
   
     return comparison

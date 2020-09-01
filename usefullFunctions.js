@@ -6,15 +6,15 @@ function bsearch (arr,value){
       if (arr[mid] === value) {
         return arr[mid];
       } else if (arr[mid] < value) {
-        start = mid + 1;
+        start = mid + 1
       } else {
         end = mid - 1;
       }          
   }
-  return `Value not found!` ;
+  return `Value not found!`;
 }
 
-// ----- SEPARATES AN ARRAY OF ITEMS WITH , ----- //
+// ----- SEPARATES AN ARRAY OF ITEMS WITH , ---- //
 function arrFormatter (arr) {
   if (arr.length === 1) {
     return arr[0]

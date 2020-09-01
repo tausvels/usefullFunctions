@@ -8,7 +8,7 @@ function bsearch (arr,value){
       } else if (arr[mid] < value) {
         start = mid + 1
       } else {
-        end = mid - 1;
+        end = mid - 1
       }          
   }
   return `Value not found!`;
@@ -48,9 +48,9 @@ const twoSum = function(nums, target) {
   const comp = {};
   for(let i=0; i < nums.length; i++){
       if(comp[ nums[i] ] >= 0){
-          return [ comp[nums[i] ] , i]
+          return [ comp[nums[i] ] , i];
       }
-      comp[target-nums[i]] = i
+      comp[target-nums[i]] = i;
   }
 };
 

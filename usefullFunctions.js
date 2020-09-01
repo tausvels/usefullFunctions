@@ -6,9 +6,9 @@ function bsearch (arr,value){
       if (arr[mid] === value) {
         return arr[mid];
       } else if (arr[mid] < value) {
-        start = mid + 1;
+        start = mid + 1
       } else {
-        end = mid - 1;
+        end = mid - 1
       }          
   }
   return `Value not found!` ;

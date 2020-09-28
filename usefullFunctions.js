@@ -4,7 +4,7 @@ function bsearch(arr, value) {
     end = arr.length - 1,
     mid;
   while (start <= end) {
-    mid = Math.floor((start + end) / 2);
+    mid = Math.floor((start + end) / 2)
     if (arr[mid] === value) {
       return arr[mid];
     } else if (arr[mid] < value) {
@@ -26,11 +26,7 @@ function arrFormatter(arr) {
 }
 
 // ---- SORTS AN ARRAY OF OBJECTS ACCORDING THEIR PROP VALUE
-<<<<<<< HEAD
-//----- (DOES NOT WORK FOR BOOLEAN) ------------------------ //
-=======
 //----- (DOES NOT WORK FOR BOOLEAN) --------------------- //
->>>>>>> 1f315cba6173d23b11c1b84875d90331591f5966
 function arrSorterAscToDsc(arr, objProp) {
   const compare = (a, b) => {
     const objA = a[objProp];

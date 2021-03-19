@@ -119,3 +119,30 @@ export const autogenerateEmptyField = (arr, arrOfProp, k1, k2) => {
   const nonEmptyFields = arr.filter((obj) => !!obj[k1] || !!obj[k2]);
   return [...nonEmptyFields, empty];
 };
+
+/**
+ * @description Deletes object keys by RECURSION
+ * @param {Object} input
+ * @param {String} key
+ * @returns nothing but it modifies the original input
+ */
+const objectModifier = (input, key) => {
+  if (typeof input === "object") {
+    delete input[key]
+    
+    for (const i in input) {
+      objectModifier(input[i], key)
+    }
+  }
+}
+/**
+ * @description Uses the above specified recursion function
+ * @param {Object} input 
+ * @param {String} key 
+ * @returns new object
+ */
+export const removeKey = (input, key) => {
+  const inputCopy = {...input}
+  objectModifier(inputCopy, key)
+  return inputCopy
+}
